@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" href="./assets/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
   <title>Frontend Mentor | Bookmark landing page</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -22,16 +26,21 @@
         </div>
         <div class="mobile-nav_container">
           <img src="./images/icon-hamburger.svg" alt="Menu icon" srcset="" class="menu-icon">
-          <nav class="mobile-nav">
-            <a href="http://">Features</a>
-            <a href="http://">Pricing</a>
-            <a href="http://">Contact</a>
-            <a href="http://">Login</a>
-            <div class="social-icons_mobile">
-              <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
-              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <div class="mobile-nav hide">
+            <div class="full-nav-mobile">
+              <nav class="nav-links">
+              <a href="http://">Features</a>
+              <a href="http://">Pricing</a>
+              <a href="http://">Contact</a>
+              <a href="http://">Login</a>
+              </nav>
+
+              <div class="social-icons_mobile">
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </div>              
             </div>
-          </nav>
+          </div>
         </div>
         <nav class="desktop-nav">
           <a href="http://">Features</a>
@@ -90,7 +99,7 @@
               </div>
               <div class="first-card">
                 <div class="card-img">
-                  <img src="./images/illustration-features-tab-1.svg" alt="First card image" srcset="">
+                  <img src="./images/illustration-features-tab-3.svg" alt="First card image" srcset="">
                 </div>
                 <div class="card-content">
                   <h3>Share your bookmarks</h3>
@@ -123,7 +132,7 @@
             </div>
           </div>          
           <div class="download-card">
-            <img src="./images/logo-chrome.svg" alt="Chrome logo" srcset="">
+            <img src="./images/logo-opera.svg" alt="Opera logo" srcset="">
             <div class="content-download_card">
               <h3>Add to Opera</h3>
               <p>Minimum version 46</p>
@@ -199,7 +208,7 @@
   <div class="attribution-container">
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a>.
     </p>
   </div>
 </body>
