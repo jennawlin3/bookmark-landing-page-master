@@ -101,7 +101,7 @@ body {
     display: flex;
     gap: 30px;
     position: absolute;
-    bottom: 20px;
+    bottom: 40px;
 }
 
 .social-icons_mobile a {
