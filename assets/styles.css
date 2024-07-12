@@ -59,7 +59,7 @@ body {
 
 .full-nav-mobile {
     width: 100%;
-    height: calc(100vh - 140px);
+    height: calc(100vh - 160px);
     position: fixed;
     display: flex;
     flex-direction: column;
