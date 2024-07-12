@@ -833,7 +833,7 @@ footer {
     .hero-illustration::before {
         width: 80%;        
         top: 120px;
-        height: 450px;
+        height: 350px;
         right: -100px; 
     }
 
