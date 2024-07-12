@@ -730,6 +730,11 @@ footer {
         width: 500px;
     }
 
+    .faq-container > p {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
     .form-container h2 {
         width: 350px;
     }
@@ -912,8 +917,20 @@ footer {
         margin: auto;
     }
 
+    .hero-container .content-container p, .features-container > p, .download-versions-container > p {
+        width: 550px;
+    }
+
     .hero-container > .content-container {
-        padding: 0 0 0 8vw;
+        padding: 0 0 0 10vw;
+    }
+
+    .hero-illustration {
+        justify-content: flex-start;
+    }
+
+    .hero-illustration img {
+        width: 800px;
     }
 
     .card-img img {
