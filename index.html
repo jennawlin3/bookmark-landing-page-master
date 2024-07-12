@@ -22,7 +22,7 @@
     <header class="header">
       <div class="header-container">
         <div class="logo-header">
-        <a href="#"><img src="./images/logo-bookmark.svg" alt="Logo" srcset=""></a>          
+        <a href="#"><img src="./images/logo-bookmark.svg" alt="Logo" srcset="" id="logo-header"></a>          
         </div>
         <div class="mobile-nav_container">
           <img src="./images/icon-hamburger.svg" alt="Menu icon" srcset="" class="menu-icon">
@@ -70,13 +70,13 @@
         <p>Our aim is to make it quick and easy for you to access your favourite websites. 
           Your bookmarks sync between your devices so you can access them on the go.</p>
         <div class="cards-container">
-          <nav class="cards-nav">
-            <a href="http://">Simple Bookmarking</a>
-            <a href="http://">Speedy Searching</a>
-            <a href="http://">Easy Sharing</a>
-          </nav>
+          <ul class="cards-nav_container">
+            <li><a href="#" data-id="first-card" class="active card-link">Simple Bookmarking</a></li>
+            <li><a href="#" data-id="second-card" class="inactive card-link">Speedy Searching</a></li>
+            <li><a href="#" data-id="third-card" class="inactive card-link">Easy Sharing</a></li>
+          </ul>
           <div class="cards">
-            <div class="first-card">
+            <div class="visible card" id="first-card">
               <div class="card-img">
                 <img src="./images/illustration-features-tab-1.svg" alt="First card image" srcset="">
               </div>
@@ -84,10 +84,10 @@
                 <h3>Bookmark in one click</h3>
                 <p>Organize your bookmarks however you like. Our simple drag-and-drop interface 
                   gives you complete control over how you manage your favourite sites.</p>
-                <a href="http://">More Info</a>
+                <a href="http://" class="more-btn">More Info</a>
               </div>
             </div>
-            <div class="second-card">
+            <div class="hide card" id="second-card">
               <div class="card-img">
                 <img src="./images/illustration-features-tab-2.svg" alt="First card image" srcset="">
               </div>
@@ -95,9 +95,10 @@
                 <h3>Intelligent search</h3>
                 <p>Our powerful search feature will help you find saved sites in no time at all. 
                   No need to trawl through all of your bookmarks.</p>
-                <a href="http://">More Info</a>
+                <a href="http://" class="more-btn">More Info</a>
               </div>
-              <div class="first-card">
+              </div>
+              <div class="hide card" id="third-card">
                 <div class="card-img">
                   <img src="./images/illustration-features-tab-3.svg" alt="First card image" srcset="">
                 </div>
@@ -105,7 +106,7 @@
                   <h3>Share your bookmarks</h3>
                   <p>Easily share your bookmarks and collections with others. Create a shareable 
                     link that you can send at the click of a button.</p>
-                  <a href="http://">More Info</a>
+                  <a href="http://" class="more-btn">More Info</a>
                 </div>
           </div>
         </div>
@@ -150,14 +151,14 @@
             <div class="title">
               <h3>What is Bookmark?</h3><span class="title-icon"><img src="./images/icon-arrow.svg" alt="" srcset="" class="arrow-icon"></span>
             </div>
-            <p class="hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
+            <p class="faq-content hide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt 
               justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
           </article>
           <article class="question second">
             <div class="title">
               <h3>How can I request a new browser?</h3><span class="title-icon"><img src="./images/icon-arrow.svg" alt="" srcset="" class="arrow-icon"></span>
             </div>
-            <p class="hide">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
+            <p class="faq-content hide">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. 
               Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, 
               ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. 
               Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
@@ -166,7 +167,7 @@
             <div class="title">
               <h3>Is there a mobile app?</h3><span class="title-icon"><img src="./images/icon-arrow.svg" alt="" srcset="" class="arrow-icon"></span>
             </div>
-            <p class="hide">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
+            <p class="faq-content hide">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum 
               urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed 
               sollicitudin ex et ultricies bibendum.</p>
           </article>
@@ -174,25 +175,33 @@
             <div class="title">
               <h3>What about other Chromium browsers?</h3><span class="title-icon"><img src="./images/icon-arrow.svg" alt="" srcset="" class="arrow-icon"></span>
             </div>
-            <p class="hide">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
+            <p class="faq-content hide">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam 
               vitae neque eget nisl gravida pellentesque non ut velit.</p>
           </article>
         </div>
-        <a href="http://">More Info</a>
+        <a href="http://" class="more-info-faq">More Info</a>
       </section>
       <section class="form-container">
         <p>35,000+ already joined</p>
         <h2>Stay up-to-date with what we’re doing</h2>
-        <form action="" method="post">
-          <input type="email" name="email" id="" placeholder="example@email.com">
+        <form action="" method="post" novalidate>
+          <div class="input-email_container">
+            <input type="email" name="email" id="" placeholder="Enter your email address">
+            <div class="error hide">
+              Whoops, make sure it's an email
+              <span class="error-icon"><img src="./images/icon-error.svg" alt=""></span>
+            </div>
+          </div>
+          
           <button type="submit">Contact Us</button>
         </form>
+          <div class="success hide">Sending...</div>
       </section>
     </main>
      <footer class="footer">
       <div class="footer-container">
         <div class="logo-footer">
-        <a href="#"><img src="./images/logo-bookmark.svg" alt="logo" srcset="" class="logo-footer"></a>          
+        <a href="#"><img src="./images/logo-bookmark-footer.svg" alt="logo" srcset="" class="logo-footer"></a>          
         </div>
         <nav class="nav-footer">
           <a href="http://">Features</a>
@@ -211,5 +220,6 @@
       Coded by <a href="https://www.linkedin.com/in/jenn-acosta7/">Jenn Acosta</a>.
     </p>
   </div>
+  <script src="./app/index.js"></script>
 </body>
 </html>
