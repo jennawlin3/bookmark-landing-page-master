@@ -5,7 +5,7 @@ const mobileMenu = document.querySelector(".mobile-nav");
 const header = document.querySelector(".header-container");
 const logo = document.querySelector("#logo-header");
 
-menuIcon.addEventListener("click", (e) => {
+    menuIcon.addEventListener("click", (e) => {
     if(e) {
         mobileMenu.classList.toggle("hide");
         header.classList.toggle("active");
@@ -18,6 +18,7 @@ menuIcon.addEventListener("click", (e) => {
         logo.setAttribute("src", "./images/logo-bookmark.svg");       
     }    
 })
+
 
 // Cards toggle 
 

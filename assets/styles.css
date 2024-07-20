@@ -47,7 +47,7 @@ body {
     background-color: hsla(229, 31%, 21%, .9);
     width: 100vw;
     position: absolute;
-    height: calc(100vh - 100px);
+    height: 100vh;
     left: 0;
     z-index: 999;
     margin-top: 39px;
@@ -59,7 +59,7 @@ body {
 
 .full-nav-mobile {
     width: 100%;
-    height: calc(100vh - 160px);
+    height: 80vh;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -651,6 +651,14 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
+    .header-container {
+        background-color: white !important;
+    }
+
+    .header-container.active {
+        position: initial !important;
+    }
+
     .desktop-nav {
         display: flex;
         align-items: center;
